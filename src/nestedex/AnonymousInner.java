@@ -1,4 +1,10 @@
 package nestedex;
+
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /*
  * 익명(무명) 클래스 : 클래스 이름이 없는 클래스입니다.
  * 일반적으로 인터페이스나 , 추상 클래스등을 일회용으로 사용하고 싶을 떄 이용되면, 활용정도만 익혀두세요
@@ -30,6 +36,23 @@ public class AnonymousInner {
 				
 			}
 		}.printData();    // 메서드 호출시 . 으로 타이핑
+	}
+	public static void main(String[] args) {
+		Frame f= new Frame("자바 GUI");
+		Button b = new Button("Close");
+		f.setSize(300, 300);
+		f.add(b);
+		f.setVisible(true);
+		
+		b.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				System.exit(0);
+			}// 제일 많이쓰이는 형태 익명클래스 
+		});
+		
 	}
 
 }

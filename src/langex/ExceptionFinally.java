@@ -22,10 +22,10 @@ public class ExceptionFinally {
 		
 		String msg ="공부, 운동 , 수면  적절하게 분배하여 실행하도록 나를 가꾸자 !!화이팅";
 		
-		FileWriter fw = null;
+		FileWriter fw = null;    // FileWriter  메시지를 쓰는 문
 		
 		try {
-			fw = new FileWriter("message.txt");
+			fw = new FileWriter("message.txt");  // 메시지를 txt로 저장  객체 생성 
 			fw.write(msg);
 			
 		} catch (IOException e) {
@@ -33,7 +33,7 @@ public class ExceptionFinally {
 			e.printStackTrace();
 		}finally { // finally 의 예외 핸들링 사용 예시
 			try {
-				fw.close();
+				fw.close();   // 객체 생성식을 한번에 쓰게도면 close사용시 컴파일에러가 뜬다  상단에 fw 를  null 값으로 선언후  객체생성 
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

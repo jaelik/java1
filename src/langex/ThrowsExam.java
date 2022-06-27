@@ -41,7 +41,7 @@ public class ThrowsExam {// throws 전가 예시 txt 파일 message를 뒤에 a�
 			throw new MyException("파일명이 틀렸거나 경로가 틀렸습니다");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e.printStackTrace();  // 스텍트레이스  문제발생의 스텍을 쌓아 콘솔에 보여지는 형태  시작점은 콘솔에서 위에서부터 알수있다 
 		}
 	}
 	static void b() throws FileNotFoundException,IOException {// 콤마를 기준으로 예외를 나열가능 
